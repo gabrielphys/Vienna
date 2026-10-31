@@ -19,6 +19,10 @@ Il workflow `.github/workflows/pages.yml` pubblica il sito a ogni push su `main`
 
 Da fare una sola volta: *Settings → Pages → Build and deployment → Source:* **GitHub Actions**.
 
+In alternativa, senza workflow: *Source:* **Deploy from a branch**, branch
+`claude/vienna-transport-dashboard-6q18zu`, cartella `/ (root)`. Il file `.nojekyll`
+fa pubblicare i file così come sono.
+
 Indirizzo: <https://gabrielphys.github.io/Vienna/>
 
 ## Contenuto
