@@ -12,7 +12,14 @@ e note pratiche.
 python3 -m http.server 8000   # poi apri http://localhost:8000
 ```
 
-Si può pubblicare così com'è su GitHub Pages (Settings → Pages → branch, cartella `/`).
+### GitHub Pages
+
+Il workflow `.github/workflows/pages.yml` pubblica il sito a ogni push su `main`
+(oppure a mano da *Actions → Deploy GitHub Pages → Run workflow*).
+
+Da fare una sola volta: *Settings → Pages → Build and deployment → Source:* **GitHub Actions**.
+
+Indirizzo: <https://gabrielphys.github.io/Vienna/>
 
 ## Contenuto
 
