@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Vienna · 21–23 dicembre 2026</title>
+  <meta name="theme-color" content="#f4f2ee">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div>
+        <h1>Vienna</h1>
+        <p class="sub">21–23 dicembre 2026</p>
+      </div>
+    </div>
+    <dl class="facts">
+      <div><dt>Andata</dt><dd>FR8193 · BGY → VIE · lun 21 · arrivo 08:05</dd></div>
+      <div><dt>Ritorno</dt><dd>FR214 · VIE → MXP · mer 23 · ~08:20</dd></div>
+      <div><dt>Hotel</dt><dd>Leonardo City West · U6 Gumpendorfer Str.</dd></div>
+      <div class="countdown"><dt id="cd-label">Partenza</dt><dd id="cd-value">–</dd></div>
+    </dl>
+  </header>
+
+  <main class="layout">
+    <section class="panel" aria-label="Programma">
+      <nav class="days" role="tablist" id="day-tabs"></nav>
+
+      <div class="day-head">
+        <div>
+          <h2 id="day-title"></h2>
+          <p class="day-stats" id="day-stats"></p>
+        </div>
+        <div class="variant" id="variant-switch" hidden>
+          <span class="variant-label">Mattina</span>
+          <div class="seg" role="radiogroup" aria-label="Versione del mattino">
+            <button role="radio" data-variant="opt" aria-checked="true">Ottimizzata</button>
+            <button role="radio" data-variant="orig" aria-checked="false">Originale</button>
+          </div>
+        </div>
+      </div>
+
+      <ol class="timeline" id="timeline"></ol>
+
+      <section class="notes" aria-labelledby="notes-h">
+        <h3 id="notes-h">Da sapere prima di partire</h3>
+        <ul id="notes"></ul>
+      </section>
+
+      <footer class="credits">
+        Mappa e dati © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>.
+        Tracciati U-Bahn e tram da OSM; la S7 è schematica. Orari da confermare su Wien Mobil o ÖBB Scotty.
+      </footer>
+    </section>
+
+    <section class="mapwrap" aria-label="Mappa">
+      <div id="map"></div>
+      <div class="map-tools">
+        <button class="tool" id="btn-fit" title="Mostra tutta la giornata">Tutta la giornata</button>
+        <button class="tool" id="btn-locate" title="Mostra la mia posizione">La mia posizione</button>
+      </div>
+      <div class="legend" id="legend" aria-label="Linee"></div>
+      <div class="leg-card" id="leg-card" hidden></div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="assets/network.js"></script>
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

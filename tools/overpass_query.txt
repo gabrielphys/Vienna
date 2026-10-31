@@ -1,0 +1,7 @@
+[out:json][timeout:60];
+area["name"="Wien"]["admin_level"="4"]->.w;
+(
+ relation["route"="subway"]["ref"~"^U[1346]$"](area.w);
+ relation["route"="tram"]["ref"~"^(D|37)$"](area.w);
+);
+out geom;
